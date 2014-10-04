@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+
+  <link rel="shortcut icon" href="/images/favicon.ico" />
+
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+  <meta content='width=device-width, initial-scale=1, user-scalable=no' name='viewport'>
+  <meta content='yes' name='apple-mobile-web-app-capable'>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link href='http://placehold.it/152x152/afac7e/ffffff&text=SPA' rel='apple-touch-icon-precomposed'>
+  <title><%= current_page.data.title || 'SPA' %></title>
+
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+  <![endif]-->
+
+  <%= javascript_include_tag 'pace' %>
+  <%= stylesheet_link_tag 'preload' %>
+</head>
+<body ng-controller="AppCtrl">
+    <%= angular_include_templates('javascripts/templates')%>
+
+    <%= yield %>
+
+    <%= javascript_include_tag 'javascripts/app.js' %>
+    <script>
+        jQuery('head').append($('<%= stylesheet_link_tag 'all' %>'));
+    </script>
+</body>
+</html>

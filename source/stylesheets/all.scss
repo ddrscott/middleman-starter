@@ -1,0 +1,23 @@
+@import 'config';
+@import 'utils';
+@import 'animate';
+
+body {
+  background: #333;
+}
+.ng-view {
+  @include container(1024px);
+  background: white;
+}
+
+header {
+  @include full;
+
+  padding: 0 gutter();
+}
+
+section {
+  @include full;
+  @extend %thin-bottom-border;
+  padding: 0 gutter();
+}

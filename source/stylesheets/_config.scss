@@ -1,0 +1,44 @@
+@import "font-awesome";
+@import "compass";
+@import "compass/reset";
+@import "breakpoint";
+@import "susy";
+@import 'typeplate';
+@import 'vars-typeplate';
+
+$sm-width:   320em/16;
+$md-width:   600em/16;
+$lg-width:   768em/16;
+$xl-width:  1024em/16;
+$hd-width:  1080em/16;
+$xxl-width: 1280em/16;
+
+$susy: (
+        flow: ltr,
+        math: fluid,
+        output: float,
+        gutter-position: after,
+        container: auto,
+        container-position: center,
+        columns: 4,
+        gutters: .25,
+        column-width: false,
+        global-box-sizing: content-box,
+        last-flow: to,
+        debug: (
+                image: hide,
+                color: rgba(#66f, .25),
+                output: background,
+                toggle: top right,
+        ),
+        use-custom: (
+                background-image: true,
+                background-options: false,
+                box-sizing: true,
+                clearfix: false,
+                rem: true,
+        )
+);
+*, *:before, *:after{
+  box-sizing: border-box;
+}
