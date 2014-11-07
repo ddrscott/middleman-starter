@@ -6,7 +6,7 @@ require 'lib/javascript_helper'
 helpers JavascriptHelper
 
 activate :automatic_image_sizes
-activate :directory_indexes
+# activate :directory_indexes
 
 activate :s3_sync do |s3_sync|
   s3_sync.bucket = 'some.bucket.name'
@@ -27,7 +27,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash
+  # activate :asset_hash  # handled by offline file
 
   # Use relative URLs
   activate :relative_assets

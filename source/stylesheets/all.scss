@@ -5,7 +5,7 @@
 body {
   background: #333;
 }
-.ng-view {
+.container {
   @include container(1024px);
   background: white;
 }

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="BrunoJS" manifest="home.appcache">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta content='yes' name='apple-mobile-web-app-capable'>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link href='http://placehold.it/152x152/afac7e/ffffff&text=Home' rel='apple-touch-icon-precomposed'>
+  <title>800ceoread</title>
+
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+  <![endif]-->
+
+  <style>
+      .show-if-anonymous {display: none;}
+      .show-if-registered {display: none;}
+  </style>
+  <%= stylesheet_link_tag 'all' %>
+
+</head>
+<body ng-controller="BrunoCtrl">
+<div class="container">
+
+  <div class="show-if-anonymous">
+    <h1>Create an Account because it's good for you!</h1>
+    <a class="btn" href="app://account/create-account">Create Account</a>
+    <a class="btn" href="app://account/sign-in">Sign In</a>
+  </div>
+
+  <div class="show-if-registered">
+    <h1>I see that you're a registered. Yippe!</h1>
+    <a class="btn" href="app://account/sign-out">Sign Out</a>
+  </div>
+
+</div>
+<%= javascript_include_tag 'app' %>
+</body>
+</html>
+

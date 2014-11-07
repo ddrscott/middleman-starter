@@ -1,0 +1,17 @@
+---
+layout: false
+---
+CACHE MANIFEST
+
+CACHE:
+<%
+# go through non-author pages and MD5 sum all the file to give an accurate offline file.
+sitemap.resources.reject{|r| r.source_file =~ /source\/(home|offline)/}.each do |resource|
+%>
+# <%= Digest::MD5.file(resource.source_file).hexdigest %>
+<%= resource.destination_path %>
+<% end %>
+
+NETWORK:
+*
+

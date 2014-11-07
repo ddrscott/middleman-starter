@@ -1,9 +1,0 @@
-angular.module('SPA').controller('AppCtrl',
-    ['$scope', '$location', '$http', '$log', '$compile', '$q', '$sce', function ($scope, $location, $http, $log, $compile, $q, $sce) {
-        $scope.trustSrc = function(src) {
-            return $sce.trustAsResourceUrl(src);
-        }
-
-        $scope.busy = true;
-    }]
-);

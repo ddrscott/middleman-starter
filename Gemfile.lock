@@ -75,8 +75,6 @@ GEM
     fog-softlayer (0.3.19)
       fog-core
       fog-json
-    font-awesome-sass (4.2.0)
-      sass (~> 3.2)
     formatador (0.2.5)
     haml (4.0.5)
       tilt
@@ -222,7 +220,6 @@ DEPENDENCIES
   angularjs-rails
   breakpoint
   compass
-  font-awesome-sass
   jquery-rails
   middleman (~> 3.3.5)
   middleman-autoprefixer

@@ -16,7 +16,7 @@ gem 'activesupport'
 
 # front end
 gem 'jquery-rails',      require: false
-gem 'font-awesome-sass', require: false
+# gem 'font-awesome-sass', require: false
 gem 'angularjs-rails',   require: false
 gem 'underscore-rails',  require: false
 gem 'momentjs-rails',    require: false
