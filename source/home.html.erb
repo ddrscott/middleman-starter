@@ -41,6 +41,13 @@
   <a class="btn" href="app://account/redeem-prompt">Redeem</a>
 
 </div>
+<script>
+    (function (ac, l) {
+        ac && ac.addEventListener('updateready', function () {
+            l.reload()
+        }, false);
+    })(window.applicationCache, location);
+</script>
 <%= javascript_include_tag 'app' %>
 </body>
 </html>
