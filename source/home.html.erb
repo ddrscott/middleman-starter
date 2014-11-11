@@ -2,53 +2,79 @@
 <html lang="en" ng-app="BrunoJS" manifest="home.appcache">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0">
-
   <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+  <meta content='width=device-width, initial-scale=1, user-scalable=no' name='viewport'>
   <meta content='yes' name='apple-mobile-web-app-capable'>
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link href='http://placehold.it/152x152/afac7e/ffffff&text=Home' rel='apple-touch-icon-precomposed'>
-  <title>800ceoread</title>
+  <title></title>
 
   <!--[if lt IE 9]>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
   <![endif]-->
 
   <style>
-      .show-if-anonymous {display: none;}
-      .show-if-registered {display: none;}
+      /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+      html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+      /* This is required to keep stuff hidden until the rest of the library is loaded */
+      .ng-cloak{display: none !important}
+
+      *, *:before, *:after {
+          box-sizing: border-box;
+      }
+
+      body {
+          font: 100% sans-serif;
+          text-align: center;
+          width: 100%;
+      }
+
+      .btn {
+          background: transparent;
+          color: #888;
+          border: 2px solid #888;
+          border-radius: 1em;
+          padding: .25em 1em;
+          text-decoration: none;
+          display: inline-block;
+          margin:.25em;
+      }
+
+      .btn:hover, .btn:active {
+          border-color: #ddd;
+      }
+
+      .btn-bar {
+          position: absolute;
+          bottom: 1em;
+          width: 100%;
+      }
+
+      .full-bg {
+          background: #fdfdfd url(images/bg.jpg) no-repeat center center fixed;
+          -webkit-background-size: contain;
+          -moz-background-size: contain;
+          -o-background-size: contain;
+          background-size: contain;
+      }
   </style>
-  <%= stylesheet_link_tag 'all' %>
-
 </head>
-<body ng-controller="BrunoCtrl">
-<div class="container">
+<body class="full-bg">
 
-  <h3>Under Construction</h3>
+<div class="btn-bar">
+  <a class="btn show-if-anonymous ng-cloak" href="app://account/create-account">Create Account</a>
 
-  <div class="show-if-anonymous">
-    <a class="btn" href="app://account/create-account">Create Account</a>
-    <a class="btn" href="app://account/sign-in">Sign In</a>
-  </div>
+  <a class="btn show-if-anonymous ng-cloak" href="app://account/sign-in">Sign In</a>
 
-  <div class="show-if-registered">
-    <a class="btn" href="app://account/sign-out">Sign Out</a>
-  </div>
-
+  <a class="btn show-if-registered ng-cloak" href="app://account/sign-out">Sign Out</a>
 
   <a class="btn" href="app://account/redeem-prompt">Redeem</a>
-
 </div>
+
 <script>
-    (function (ac, l) {
-        ac && ac.addEventListener('updateready', function () {
-            l.reload()
-        }, false);
-    })(window.applicationCache, location);
+    (function (ac, l) {ac && ac.addEventListener('updateready',function(){l.reload();}, false)})(window.applicationCache, location);
 </script>
-<%= javascript_include_tag 'app' %>
+<%= javascript_include_tag 'http://pf.homes.s3.amazonaws.com/dist/bruno-js-d9e4cfd6.js' %>
 </body>
 </html>
 
