@@ -1,11 +1,12 @@
 @import 'reset';
 
+$bg-color: #fdfdfd;
 $button-color: #888;
 $button-background:  rgba(255,255,255, 0.75);
 $button-active-color: #ddd;
 
 // edge color, background image
-$full-bg-url: #fdfdfd url(images/bg.jpg);
+$full-bg-url: $bg-color url(images/bg.jpg);
 
 
 // This is required to keep stuff hidden until the rest of the library is loaded
@@ -14,29 +15,34 @@ $full-bg-url: #fdfdfd url(images/bg.jpg);
 *, *:before, *:after { box-sizing: border-box }
 
 body {
-  font: 100% sans-serif;
-  text-align: center;
-  width: 100%;
+    background: $bg-color;
+    font: 100% sans-serif;
+    text-align: center;
 }
 
 .btn {
-  background: $button-background;
-  color: $button-color;
-  border: 1px solid $button-color;
-  border-radius: .25em;
-  padding: .25em 1em;
-  text-decoration: none;
-  display: inline-block;
-  margin:.25em;
+    background: $button-background;
+    color: $button-color;
+    border: 1px solid $button-color;
+    border-radius: .25em;
+    padding: .25em 1em;
+    text-decoration: none;
+    display: inline-block;
+    margin:.25em;
 }
 
 .btn-bar {
-  position: absolute;
-  bottom: 1em;
-  width: 100%;
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
 }
 
 .full-bg {
-  background: $full-bg-url no-repeat center center;
-  background-size: contain;
+    background: $full-bg-url no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    right: 1em;
+    bottom: 1em;
 }
