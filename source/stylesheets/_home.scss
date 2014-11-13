@@ -30,12 +30,6 @@ body {
   margin:.25em;
 }
 
-.btn:hover,
-.btn:active {
-  border-color: $button-active-color;
-  color: $button-active-color;
-}
-
 .btn-bar {
   position: absolute;
   bottom: 1em;
@@ -43,6 +37,6 @@ body {
 }
 
 .full-bg {
-  background: $full-bg-url no-repeat center center fixed;
+  background: $full-bg-url no-repeat center center;
   background-size: contain;
 }
